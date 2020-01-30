@@ -1,0 +1,6 @@
+# Igore executable
+befunge93+
+
+*.o
+
+.vscode
