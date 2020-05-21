@@ -2,7 +2,7 @@
 
 #include "bef_type.hpp"
 
-//Namespace for Stack operations
+//Singleton class for Stack operations
 class Stack
 {
 friend class Heap;
@@ -11,6 +11,8 @@ private:
     static constexpr size_t STACK_SIZE = ((1<<20) * sizeof(int64_t)) / sizeof(bef_t);
 
     static bef_t stack[STACK_SIZE];
+
+    // Stack pointer
     static bef_t* sp;
 
 public:

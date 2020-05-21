@@ -20,6 +20,9 @@ struct block
     bef_t head, tail;
 };
 
+
+// Functions and operators for 62-bit integers
+
 inline bef_t int2bef(int64_t i) { return {.i = (i<<2) + 1}; }
 
 inline int64_t bef2int(bef_t b) { return b.i>>2; }
