@@ -1,4 +1,4 @@
-.PHONY: clean distclean default
+.PHONY: clean distclean default debug
 
 CXX=c++
 CXXFLAGS=-Wall -std=c++11
@@ -11,7 +11,7 @@ debug: befunge93+
 
 *.o: *.cpp
 
-befunge93+: bef_type.o stack.o heap.o befunge93+.o
+befunge93+: stack.o heap.o befunge93+.o
 	$(CXX) $(CXXFLAGS) -o befunge93+ $^
 
 clean:
